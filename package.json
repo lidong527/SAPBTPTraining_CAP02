@@ -5,7 +5,7 @@
     "@sap/cds": "^9"
   },
   "devDependencies": {
-    "@cap-js/cds-typer": ">=0.1",
+    "@cap-js/cds-typer": "^0.40.0",
     "@cap-js/cds-types": "^0.16.0",
     "@cap-js/sqlite": "^2.4",
     "@types/node": "^24.13.2",
@@ -14,7 +14,10 @@
     "typescript": "^6.0.3"
   },
   "scripts": {
-    "start": "cds watch"
+    "start": "cds watch",
+    "build": "cds build",
+    "watch": "cds watch",
+    "types": "cds-typer '*'"
   },
   "private": true,
   "imports": {

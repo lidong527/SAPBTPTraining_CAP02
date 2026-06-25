@@ -11,6 +11,12 @@ POST {{host}}/odata/v4/catalog/hello
 ### Metadata
 GET {{host}}/odata/v4/catalog/$metadata
 
+### Metadata
+GET {{host}}/odata/v4/order/$metadata
+
+### getDashboard
+GET {{host}}/odata/v4/order01/getDashboard
+
 ###
 GET {{host}}/odata/v4/order/SalesOrders
 

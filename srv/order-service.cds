@@ -10,4 +10,6 @@ service OrderService {
 
     entity Payments
         as projection on myorder.Payments;
+
+        
 }
