@@ -1,0 +1,23 @@
+{
+  "name": "SAPBTPTraining_CAP02",
+  "version": "1.0.0",
+  "dependencies": {
+    "@sap/cds": "^9"
+  },
+  "devDependencies": {
+    "@cap-js/cds-typer": ">=0.1",
+    "@cap-js/cds-types": "^0.16.0",
+    "@cap-js/sqlite": "^2.4",
+    "@types/node": "^24.13.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "start": "cds watch"
+  },
+  "private": true,
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  }
+}

@@ -1,0 +1,37 @@
+@host=http://localhost:4004
+@bookId=1
+
+
+POST https://port4004-workspaces-ws-dyj7d.us10.trial.applicationstudio.cloud.sap/odata/v4/catalog/hello
+
+
+###
+POST {{host}}/odata/v4/catalog/hello
+
+### Metadata
+GET {{host}}/odata/v4/catalog/$metadata
+
+###
+GET {{host}}/odata/v4/order/SalesOrders
+
+
+### Entity List
+GET {{host}}/odata/v4/catalog/Books
+
+### Entity By Key
+GET {{host}}/odata/v4/catalog/Books(1)
+
+### Create
+POST ...
+
+### Update
+PATCH ...
+
+### Delete
+DELETE ...
+
+### Function
+
+### Action
+
+### Custom Service

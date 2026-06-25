@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+@cds-models/
+
+# CAP generated
+gen/
+
+# logs
+*.log
+
+# env
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# mac
+.DS_Store
+
+# coverage
+coverage/
+
+# sqlite
+*.db
+*.sqlite
