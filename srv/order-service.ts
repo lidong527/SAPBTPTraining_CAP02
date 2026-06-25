@@ -1,5 +1,15 @@
 import cds from '@sap/cds';
+import type {
+    SalesOrders as SalesOrderType,
+    PurchaseOrders as PurchaseOrderType,
+    Payments as PaymentType,
 
+} from "../@cds-models/Order01Service";
+import type { DashboardResult } from '#cds-models/';
+
+// import type {
+//     DashboardResult
+// } from "../@cds-models/Order01Service"; 
 export default class OrderService01 extends cds.ApplicationService {
 
     async init() {
@@ -8,7 +18,7 @@ export default class OrderService01 extends cds.ApplicationService {
             SalesOrders,
             PurchaseOrders,
             Payments
-        } = this.entities;
+        } = cds.entities("Order01Service");//this.entities;
 
         this.on('getDashboard', async () => {
 
@@ -96,7 +106,7 @@ export default class OrderService01 extends cds.ApplicationService {
             const totalPaid =
                 Number(paidResult?.total ?? 0);
 
-            return {
+            const result: DashboardResult = {
                 totalSales,
                 totalPurchase,
                 totalPaid,
@@ -106,13 +116,13 @@ export default class OrderService01 extends cds.ApplicationService {
                 purchaseCount: Number(purchaseCount?.count ?? 0),
                 paymentCount: Number(paymentCount?.count ?? 0)
             };
-
+            return result;
         });
 
 
         this.on('READ', SalesOrders, async (req) => {
             console.log('OrderService loaded');
-            return await SELECT.from(SalesOrders);
+            return await SELECT.from(SalesOrders) as SalesOrderType[];
 
         });
 

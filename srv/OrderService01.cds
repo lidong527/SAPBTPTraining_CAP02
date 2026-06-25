@@ -1,4 +1,5 @@
 using myorder from '../db/schema01';
+using { DashboardResult } from './types';
 
 @impl: './order-service.ts'
 service Order01Service {
@@ -12,17 +13,4 @@ service Order01Service {
     function getDashboard() returns DashboardResult;
 }
 
-type DashboardResult {
 
-    totalSales    : Decimal(15, 2);
-
-    totalPurchase : Decimal(15, 2);
-
-    totalPaid     : Decimal(15, 2);
-
-    totalUnpaid   : Decimal(15, 2);
-
-    salesCount      : Integer;
-    purchaseCount   : Integer;
-    paymentCount    : Integer;
-}
